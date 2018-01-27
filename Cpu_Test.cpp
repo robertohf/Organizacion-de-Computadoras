@@ -15,7 +15,7 @@ int main(int argc, char** argv)
   uut->read_address1 = 0;
   uut->read_address2 = 1;
   uut->write_address = 3;
-  uut->func = 0;
+  uut->func = 1;
   uut->write_enable = 1;
   uut->eval();
 
