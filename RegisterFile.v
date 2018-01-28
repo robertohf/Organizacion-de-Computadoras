@@ -9,9 +9,9 @@ module RegisterFile(
   output [31:0]read_data2
 );
 
-  reg [31:0] registeries[0:31];
+  reg [31:0]registeries[0:31];
 
-  always @ (posedge clk) begin
+  always @(posedge clk) begin
     registeries[write_address] <= write_enable ? write_data : registeries[write_address];
   end
 
@@ -19,7 +19,7 @@ module RegisterFile(
   assign read_data2 = registeries[read_address2];
 
   initial begin
-    registeries[0] = 32'd5;
-    registeries[1] = 32'd10;    
+    registeries[0] = 32'd10;
+    registeries[1] = 32'd5;    
   end
 endmodule

@@ -7,9 +7,8 @@ module Alu(
   output reg isZero,
   output [31:0]result
 );
-  assign isZero  = (result == 0);
 
-  always @ (read_data1 or read_data2 or func) begin
+  always @(read_data1 or read_data2 or func) begin
     case(func)
       `ALU_ADD: 
         result = $signed(read_data1) + $signed(read_data2);
@@ -23,4 +22,6 @@ module Alu(
         result = 32'dx;
     endcase
   end
+
+  assign isZero  = (result == 0);
 endmodule

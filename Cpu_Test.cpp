@@ -25,10 +25,10 @@ int main(int argc, char** argv)
   }
 
   for(int i=0; i<32;i++){
-    printf("RegisterFile:%d = %x\n",i,uut->MIPS32SOC__DOT__RegisterFile__DOT__registeries[i]);
+    printf("RegisterFile[%d] = %x\n",i,uut->MIPS32SOC__DOT__RegisterFile__DOT__registeries[i]);
   }
 
-  printf("IsZero = %d", uut->isZero);
+  printf("IsZero = %d\n", uut->isZero);
 
   uut->final();
 	delete uut;
